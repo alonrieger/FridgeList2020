@@ -1,0 +1,1 @@
+C:\Users\ronro\Dropbox\iot project\New folder\Basic\CounterApp\CounterApp.UWP\CounterApp.UWP.csproj;x86

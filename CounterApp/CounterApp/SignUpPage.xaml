@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CounterApp"
+             mc:Ignorable="d"
+             x:Class="CounterApp.SignUpPage">
+    <ContentPage.BindingContext>
+        <local:SignUpPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Editor Placeholder="Username"  FontSize="16" Text="{Binding username}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+                        <Editor Placeholder="Password" FontSize="16" Text="{Binding password}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2">
+                        <Button Text="Register" HorizontalOptions="CenterAndExpand" TextColor="White"  BackgroundColor="Blue" Command="{Binding  RegisterCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Already signed up?" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="4">
+                        <Button Text="Login" HorizontalOptions="CenterAndExpand" TextColor="White"  BackgroundColor="Blue" Command="{Binding  LoginCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>    
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

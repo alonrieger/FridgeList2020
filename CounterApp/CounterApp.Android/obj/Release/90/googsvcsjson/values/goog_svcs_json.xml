@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="gcm_defaultSenderId" translatable="false">390557110949</string>
+  <string name="google_app_id" translatable="false">1:390557110949:android:93e4b4850652a86714734c</string>
+  <string name="default_web_client_id" translatable="false">390557110949-aqra3b0kp0vbnn4qp9sg6u513om0s4er.apps.googleusercontent.com</string>
+  <string name="firebase_database_url" translatable="false">https://fridgelistnotifications.firebaseio.com</string>
+  <string name="google_api_key" translatable="false">AIzaSyDdv4__3j6aHKf3OfGUN-rZBXdJGg6hoYM</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDdv4__3j6aHKf3OfGUN-rZBXdJGg6hoYM</string>
+  <string name="google_storage_bucket" translatable="false">fridgelistnotifications.appspot.com</string>
+  <string name="project_id" translatable="false">fridgelistnotifications</string>
+</resources>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp" 
+             x:Class="CounterApp.ViewContent"
+             x:Name="ThisPage">
+    <ContentPage.BindingContext>
+        <local:ViewContentViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Padding="20" Spacing="0">
+        <Label Margin="0,0,0,20" FontSize="Large" Text="Refrigerator Content" TextColor="Black" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        <Frame BackgroundColor="Crimson" BorderColor="DarkSlateGray" Padding="0">
+            <Grid Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label  Text="Name" VerticalOptions="Center" Grid.Column="0"/>
+                <Label  Text="Count" VerticalOptions="Center" Grid.Column="1"/>
+                <Label  Text="Add\Subtract" VerticalOptions="Center" Grid.Column="2"/>
+                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand" HeightRequest="100"/>
+                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand" HeightRequest="100"/>
+                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand" HeightRequest="100"/>
+            </Grid>
+        </Frame>
+        <ListView ItemsSource="{Binding productsInFridge}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Padding="0">
+                            <Grid Padding="0" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label  Text="{Binding Name}" VerticalOptions="Center" Grid.Column="0"/>
+                                <Label  Text="{Binding Count}" VerticalOptions="Center" Grid.Column="1"/>
+                                <StackLayout Grid.Column="2" Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Button  Text="+" WidthRequest="50" VerticalOptions="Center"  Command="{Binding Source={x:Reference ThisPage},Path=BindingContext.increment}"  CommandParameter="{Binding Name}"/>
+                                    <Button  Text="-" WidthRequest="50" VerticalOptions="Center"  Command="{Binding Source={x:Reference ThisPage},Path=BindingContext.decrement}"  CommandParameter="{Binding Name}"/>
+                                </StackLayout>
+                                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+                                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+                                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

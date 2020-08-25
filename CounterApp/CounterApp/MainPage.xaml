@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Image Source="" BackgroundColor="PowderBlue" Grid.Column="0" Grid.Row="0"
+               Grid.ColumnSpan="2" ></Image>
+        <Label Margin="0,0,0,20" FontSize="Large" Text="{Binding FridgeName}" TextColor="Black" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" Grid.Row="0"/>
+        <Grid Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button Text="View Refrigerator Content" BackgroundColor="Blue" TextColor="White" Command="{Binding RefrigiratorContentCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="0"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="VIew Shopping List" BackgroundColor="Blue" TextColor="White" Command="{Binding PurchaseListCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="1"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="Insert Product" BackgroundColor="Blue" TextColor="White" Command="{Binding InsertCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="2"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="Delete Product" BackgroundColor="Blue" TextColor="White" Command="{Binding DeleteCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="3"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="Get fridge link" BackgroundColor="Blue" TextColor="White" Command="{Binding FridgeLinkCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="4"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="Leave Fridge" BackgroundColor="Blue" TextColor="White" Command="{Binding AccountSettingsCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="5"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+            <Button Text="Sign Out" BackgroundColor="Blue" TextColor="White" Command="{Binding SignOutCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" Grid.Row="7"/>
+            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
