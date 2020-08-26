@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=skeletonstorage9;AccountKey=JkIOaYdh37Js2i8QJVuYeq/LPjJPsUZoQwdCsxPHuBPlBPk8RUiZdVe08Ts+Jz8QAeH7x38HUZyLuL/MHtCN4g==;EndpointSuffix=core.windows.net",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=skeletonstorage9;AccountKey=JkIOaYdh37Js2i8QJVuYeq/LPjJPsUZoQwdCsxPHuBPlBPk8RUiZdVe08Ts+Jz8QAeH7x38HUZyLuL/MHtCN4g==;EndpointSuffix=core.windows.net",
+    "eventHubConnectionString": "Endpoint=sb://ihsuprodparres003dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=2jFfriMIKrtRftbEre3I8EkbgEXxAfRGh2mmgbmhbQw=;EntityPath=iothub-ehub-skeleton-m-3222826-f21e8c9c1a",
+    "AzureSignalRConnectionString": "Endpoint=https://signalrskeleton1.service.signalr.net;AccessKey=pMxnmq3U6rayXiaZ5eKASEm/opav+JraaSNyzZvdNxk=;Version=1.0;"
+  },
+  "Host": {
+    "CORS": "http://localhost:7071",
+    "CORSCredentials": true
+  }
+}
