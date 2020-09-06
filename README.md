@@ -12,7 +12,7 @@ Every operation in the above state machine, which requires access to a table in 
 
 1. delete_from_table(String tableName, String field, String columnName): accesses the table named 'tableName', and deletes the row which holds the name 'field' under column 'colimnName'. References:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1. InsertPageViewModel: InsertToCloudTable: handles the case where a product we inserted is in the shopping list, and thus should be deleted from it (if the amount inserted exceeds the amount in the shopping list).  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2. MainViewModel: free_user_from_fridge: handles the case where a user decided to log-out, or leave the fridge. In that case &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the user is deleted from the list of the fridge users.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3. ShoppingListViewModel: decrementCmd: handles the case where the '-' button is pressed, and the number in the list is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reduced to 0.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4. ViewContentViewModel: incrementCmd: handles the case where the '+' button is pressed, and the product is in the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shopping list with quantity 1, in which case it should be deleted from the shopping list.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrementCmd: handles the case where the '-' button is pressed, and the number in the list is reduced to 0.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2. MainViewModel: free_user_from_fridge: handles the case where a user decided to log-out, or leave the fridge. In that case the user is deleted from the list of the fridge users.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3. ShoppingListViewModel: decrementCmd: handles the case where the '-' button is pressed, and the number in the list is reduced to 0.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4. ViewContentViewModel: incrementCmd: handles the case where the '+' button is pressed, and the product is in the shopping list with quantity 1, in which case it should be deleted from the shopping list.  
+decrementCmd: handles the case where the '-' button is pressed, and the number in the list is reduced to 0.
