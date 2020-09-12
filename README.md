@@ -35,16 +35,14 @@ decrementCmd: handles the case where the '-' button is pressed, and the number i
 
 3. new_tables(String FName, String Uname): This function is called from NewFridgePageViewModel, after the user gives a valid new fridge name. The function generates a random id for the fridge, and adds 'Fname' and the id to the fridges table. Then it creates four tables for the fridge (Users, content,shopping list, and last activity), and adds 'Uname' to the fridge's users table.
 
-4. add_to_table(String table_type, String tableName, List<String> arg): this function inserts the data in 'arg' as a new row in the azure table called 'tablename'.  
-  References:  
+4. add_to_table(String table_type, String tableName, List<String> arg): this function inserts the data in 'arg' as a new row in the azure table called 'tablename'. References:     
   4.1. SignUpPageViewModel: save_password_and_username: after verifying that the username and password are valid, they are added to the users table.  
   4.2. tableFunctions: add_to_table: the method is called twice- to add the fridge to the fridges table, and to add the user to the fridge's users table.  
   4.3. JoinFridgePageViewModel: JoinFridgeCmd: once the user submits valid fridge name and id, the user is added to the fridge's users list.  
   4.4. ShoppingListViewModel: insertCmd: when a user wishes to add a product to the shopping list.  
   4.5. InsertPageViewModel: insertToCloudTable: after the user scans a product, and assigns a name and number, those are added to the fridge's content table.  
   
-5. get_column(String tableName, String columnName): this function accesses the column denoted by 'columnName' in the table denoted by 'tableName', and returns it as a list. This function is very useful for cases where we need to verify if something exists.   
-References:  
+5. get_column(String tableName, String columnName): this function accesses the column denoted by 'columnName' in the table denoted by 'tableName', and returns it as a list. This function is very useful for cases where we need to verify if something exists. References:    
 5.1. SignUpPageViewModel: username_already_exists: this functions verifies if the username exists. If it does, the app instructs the user to choose another name.  
 5.2. LoginPageViewModel: username_already_exists: same as above. If it does not exists, the user is alerted that there is no such user.  
 5.3. newFridgePageViewModel: fridgename_already_exists: same as above, only now the function verifies if the fridge exists. If it does, the app instructs the user to choose another name.  
