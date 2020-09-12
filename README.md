@@ -61,7 +61,12 @@ changesLogIsEmpty, writeChangesInFridge: the function is called in order to acce
  6.4. InsertPageViewModel: insertToCloudTable: same as above, only now the shopping list is updated after the user inserts a new product.  
  6.5. MainViewModel: fridgeLink: when the user asks for the fridge link, in order to invite new participants, the function returns the fridge name and id. It has to call get_value in order to get the fridge's id.  
  
- 7. table_exists(String tableName)
+ 7. table_exists(String tableName): this function verifies that the table name 'tableName' exists in our azure storage. It is used by JoinFridgePageViewModel:fridgename_already_exists, to ensure that the fridge the user wishes to join exists.
+ 
+ 8. set_value(String tableName, String columnName, String rowName, String newValue): this function accesses the table called 'tableName', and sets the value called 'newValue' in the entry defined by the column called 'columnName' and row called 'rowName'. References:  
+ 8.1. InsertPageViewModel: insertToCloudTable: when an insertion to the content list affects the shopping list, the value in the shopping list is changed accordingly.  
+ 8.2. ShoppingListViewModel: the function sets the number of units of products in incrementCmd and decrementCmd, and in insertCmd, in case the product inserted already exists in the shopping list, and only its number of units has to be updated.  
+ 8.3. InsertPageViewModel: same as above, incrementing and decrementing actions call set_value. In addition, same as in InsertPageViewModel, increment affects the shopping list. 
  
   
 
