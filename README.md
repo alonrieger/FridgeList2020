@@ -54,6 +54,14 @@ incrementCmd: same as in insertToCloudTable.
 5.7. MainViewModel: qr_code_exists: Same as in many functions above, when we wish to delete a product, we have to verify that the Qr code we just scanned is assigned to a product in the fridge.  
 changesLogIsEmpty, writeChangesInFridge: the function is called in order to access the activity changes. The first function verifies if it is empty (in which case no message would be prompted when the main page opens). The second function accesses all the sentences in order to delete old ones (if there are more than 3), and insert a sentence which explains the last change.  
  
- 6. get_value(String tableName, String columnName, String rowName)
+ 6. get_value(String tableName, String columnName, String rowName): this function returns the value from the table called 'tableName', in the entry defined by the column called 'columnName' and row called 'rowName'. References:  
+ 6.1. LoginPageViewModel: password_incorrect: when the user logs in, get_value returns its respective password, to verify if it is consistent with the password the user submitted.  
+ 6.2. JoinFridgePageViewModel: fridgeid_incorrect: same as above, only now the fridge id is verified.  
+ 6.3. ViewContentViewModel: incrementCmd: when incrementing the number of products in the fridge, the shopping list may be affected. In order to update that list, get_value returns the unit count of the product in the shopping list.  
+ 6.4. InsertPageViewModel: insertToCloudTable: same as above, only now the shopping list is updated after the user inserts a new product.  
+ 6.5. MainViewModel: fridgeLink: when the user asks for the fridge link, in order to invite new participants, the function returns the fridge name and id. It has to call get_value in order to get the fridge's id.  
+ 
+ 7. table_exists(String tableName)
+ 
   
 
